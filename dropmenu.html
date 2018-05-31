@@ -1,0 +1,133 @@
+<style>
+  body{
+    padding:0px;
+    margin:0px;
+  }
+
+  .drawer{
+    padding-top:12px;
+    border: 1px solid red;
+    height: 30px;
+    width: 200px;
+    background:lightblue;
+    text-align:center;
+
+  }
+
+  .drawer_c{
+    background:blue;
+    height: 0px;
+    width:200px;
+    transition:height 0.7s;  
+    border: 1px solid red;
+  } 
+
+  #drawer_p2{
+    position: absolute;
+    left:200px;
+    top:0px;
+  }
+
+ #drawer_c2{
+    position: absolute;
+    left:200px;
+    top:44px;
+  }
+
+  #drawer_p3{
+    position: absolute;
+    left:400px;
+    top:0px;
+  }
+
+ #drawer_c3{
+    position: absolute;
+    left:400px;
+    top:44px;
+  }
+ 
+</style>
+
+
+
+<div id="drawer_p1" class="drawer">
+联系我们
+</div> 
+
+<div id="drawer_c1" class="drawer_c">
+</div>
+
+<div id="drawer_p2" class="drawer">
+联系我们
+</div> 
+
+<div id="drawer_c2" class="drawer_c">
+</div>
+
+</br>
+</br>
+</br>
+
+
+<script>
+function $(id){
+   return document.getElementById(id) 
+}
+
+var c1 = $("drawer_c1")
+var p1 = $("drawer_p1")
+
+var c2 = $("drawer_c2")
+var p2 = $("drawer_p2")
+
+var c4 = $("drawer_c4")
+var p4 = $("drawer_p4")
+
+var c3 = $("drawer_c3")
+var p3 = $("drawer_p3")
+
+
+p1.onmouseover= function(){
+        clear();
+        c1.style.height = "90px";
+	c1.style.width = "200px";
+
+}
+
+
+
+c1.onmouseout= function(){
+ 	c1.style.height = "0px";
+	c1.style.width = "200px";
+
+}
+
+
+function clear(){
+  var children = document.getElementsByClassName("drawer_c");
+                 
+  children[0].style.height = "0px";
+  children[1].style.height = "0px";
+
+}
+
+p2.onmouseover= function(){
+        clear();
+        c2.style.height = "90px";
+	c2.style.width = "200px";
+
+}
+
+
+
+
+c2.onmouseout= function(){
+ 	c2.style.height = "0px";
+	c2.style.width = "200px";
+
+}
+
+
+
+
+</script>
